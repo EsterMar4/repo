@@ -14,17 +14,17 @@ namespace WebApplication1_Consist.Controllers
             userBL= new UserBL();
         }
 
-        //Delete user by userId
+        //Delete user by userId.
         [HttpDelete]
         public bool Delete(int id) =>
             userBL.DeleteUserById(id);
 
-        //Create user
+        //Create user.
         [HttpPost]
         public void post(string name, string password) =>
             userBL.AddUser(name, password);
 
-        //Validate user by name & password
+        //Validate user by name & password.
         [HttpGet]
         public bool validate(string name, string password) =>
             userBL.Validate(name, password);
